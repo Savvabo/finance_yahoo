@@ -1,0 +1,7 @@
+sqlalchemy
+flask_restx
+flask
+isort
+flake8
+black
+mypy
