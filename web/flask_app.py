@@ -18,12 +18,13 @@ def shutdown_session(exception=None):
 
 
 @default_namespace.route('/filter_by_attributes')
-@default_namespace.doc(params=
-                       dict(company_name='PD', start_date='20-05-2021',
-                            end_date='20-05-2021', limit='0', offset='0'))
+@default_namespace.doc(
+    params=dict(company_name='PD', limit='0', offset='0',
+                #start_date='20-05-2021', end_date='20-05-2021'
+                ))
 class GetCourse(Resource):
     @staticmethod
-    # todo refactor
+    # todo implement filter by dates
     def get():
         args = request.args
         # try:
@@ -59,4 +60,4 @@ class GetCourse(Resource):
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run()

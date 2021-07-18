@@ -1,4 +1,4 @@
-from entities import HistoryRow, metadata
+from shared.entities import HistoryRow, metadata
 from typing import List
 
 from sqlalchemy import create_engine
@@ -16,5 +16,3 @@ class DB:
         session = self.session()
         session.add_all(history_data)
         session.commit()
-
-

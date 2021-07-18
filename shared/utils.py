@@ -1,4 +1,4 @@
-from entities import HistoryRecord
+from shared.entities import HistoryRecord
 import datetime
 from shared.const import date_format
 
