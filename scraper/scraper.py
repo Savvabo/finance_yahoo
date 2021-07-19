@@ -1,11 +1,11 @@
-import requests
+import argparse
+import datetime
 from typing import List
+
+import requests
+from shared.const import HEADERS, PARAMS, URL_TEMPLATE
 from shared.db import DB
 from shared.entities import HistoryRow
-import datetime
-from shared.const import URL_TEMPLATE, HEADERS, PARAMS
-import argparse
-
 
 parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument("company_name", type=str)

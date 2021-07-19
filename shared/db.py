@@ -1,13 +1,13 @@
-from shared.entities import HistoryRow, metadata
 from typing import List
 
+from shared.entities import HistoryRow, metadata
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
 class DB:
     def __init__(self):
-        self.engine = create_engine('sqlite:///tmp/main.db')
+        self.engine = create_engine("sqlite:///tmp/main.db")
         metadata.create_all(self.engine)
         self.session = sessionmaker(bind=self.engine)
 

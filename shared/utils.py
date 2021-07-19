@@ -1,6 +1,7 @@
-from shared.entities import HistoryRecord
 import datetime
+
 from shared.const import date_format
+from shared.entities import HistoryRecord
 
 
 def row_to_dict(row):
